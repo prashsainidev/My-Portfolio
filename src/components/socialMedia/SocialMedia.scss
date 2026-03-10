@@ -68,6 +68,14 @@
   background-color: $instagram;
 }
 
+.leetcode i {
+  background-color: $leetcode;
+}
+
+.hashnode i {
+  background-color: $hashnode;
+}
+
 /* Hover Transition */
 .twitter i:hover,
 .google i:hover,
@@ -78,7 +86,9 @@
 .instagram i:hover,
 .stack-overflow i:hover,
 .kaggle i:hover,
-.medium i:hover {
+.leetcode i:hover,
+.medium i:hover,
+.hashnode i:hover {
   background-color: $textColor;
 }
 

@@ -127,6 +127,29 @@ export default function socialMedia() {
           <span></span>
         </a>
       ) : null}
+      {socialMediaLinks.leetcode ? (
+        <a
+          href={socialMediaLinks.leetcode}
+          className="icon-button leetcode"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fas fa-code"></i>
+          <span></span>
+        </a>
+      ) : null}
+
+      {socialMediaLinks.hashnode ? (
+        <a
+          href={socialMediaLinks.hashnode}
+          className="icon-button hashnode"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-hashnode"></i>
+          <span></span>
+        </a>
+      ) : null}
     </div>
   );
 }

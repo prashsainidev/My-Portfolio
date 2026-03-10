@@ -1,6 +1,6 @@
-fs = require("fs");
+const fs = require("fs");
 const https = require("https");
-process = require("process");
+const process = require("process");
 require("dotenv").config();
 
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
@@ -25,7 +25,7 @@ if (USE_GITHUB_DATA === "true") {
   var data = JSON.stringify({
     query: `
 {
-  user(login:"${GITHUB_USERNAME}") { 
+  user(login:"${GITHUB_USERNAME}") {
     name
     bio
     avatarUrl

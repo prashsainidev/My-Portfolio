@@ -33,11 +33,13 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/prashantsaini1525/",
-  linkedin: "https://www.linkedin.com/in/prashantssaini/",
+  github: "https://github.com/prashsainidev/",
+  linkedin: "https://www.linkedin.com/in/prashsainidev/",
   gmail: "Prashant.saini.3150@gmail.com",
-  twitter: "https://x.com/Prashan58889893",
-  facebook: "https://www.facebook.com/prashant.saini.31508076/",
+  twitter: "https://x.com/prashsainidev/",
+  facebook: "https://www.facebook.com/prashsainidev/",
+  leetcode: "https://leetcode.com/u/prashsainidev/",
+  hashnode: "https://hashnode.com/@prashsainidev",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -49,7 +51,7 @@ const aboutSection = {
   subTitle:
     "Hi, I'm Prashant Saini – a curious, driven full-stack developer from Aligarh, Uttar Pradesh. 🌐",
   aboutParagraphs: [
-    "🎓 I completed my B.Tech in Information Technology from Dr. A.P.J. Abdul Kalam Technical University in July 2024 with a CGPA of 7.8. The moment I built my first web page, I knew that creating digital experiences was what I loved to do.",
+    "🎓 I completed my B.Tech in Information Technology from Dr. A.P.J. Abdul Kalam Technical University in July 2024 with a CGPA of 8.1. The moment I built my first web page, I knew that creating digital experiences was what I loved to do.",
     "💻 I work on both front-end and back-end development. I enjoy building user-friendly interfaces with JavaScript, HTML, and CSS, and I create reliable back-end systems using Node.js and MongoDB. My projects include a library management system, an educational website, and even a heart disease prediction model using machine learning.",
     "🚀 I mix creativity with solid coding skills. I love solving everyday problems with clear, efficient code and am always exploring new tools and techniques to improve my work.",
     "🤝 I value constant learning and teamwork. I believe that sharing ideas and working together leads to smart solutions that really make a difference.",
@@ -62,90 +64,100 @@ const aboutSection = {
 
 const skillsSection = {
   title: "Tech Stack",
-  subTitle:
-    "Full-Stack Developer Showcasing a Modern Tech Stack with Custom Icons & Innovative Solutions.",
+  subTitle: "Full-Stack Developer Showcasing a Modern Tech Stack with Custom Icons & Innovative Solutions.",
   // Software skills grouped by category
-  softwareSkills: {
-    webDevelopment: [
-      // Front-end Technologies
-      {
-        skillName: "html-5",
-        svgIconPath: "https://img.icons8.com/color/96/000000/html-5.png"
-      },
-      {
-        skillName: "css3",
-        svgIconPath: "https://img.icons8.com/color/96/000000/css3.png"
-      },
-      {
-        skillName: "JavaScript",
-        svgIconPath: "https://img.icons8.com/color/96/000000/javascript.png"
-      },
-      {
-        skillName: "reactjs",
-        svgIconPath: "https://img.icons8.com/color/96/000000/react-native.png"
-      },
-      {
-        skillName: "nextjs",
-        svgIconPath: "https://img.icons8.com/color/96/000000/nextjs.png"
-      },
-      {
-        skillName: "tailwind",
-        svgIconPath: "https://img.icons8.com/color/96/000000/tailwindcss.png"
-      },
-      // Removed EJS as it's not part of your skillset
-      // Back-end / Server-side Technologies
-      {
-        skillName: "nodejs",
-        svgIconPath: "https://img.icons8.com/color/96/000000/nodejs.png"
-      },
-      {
-        skillName: "Express.js",
-        svgIconPath: "https://img.icons8.com/color/96/000000/express-js.png"
-      },
-      {
-        skillName: "sql-database",
-        svgIconPath: "https://img.icons8.com/color/96/000000/database.png"
-      },
-      {
-        skillName: "Mongo DB",
-        svgIconPath: "https://img.icons8.com/color/96/000000/mongodb.png"
-      }
-    ],
-    coding: [
-      // Programming Languages (only including Java now)
-      {
-        skillName: "Java",
-        svgIconPath:
-          "https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png"
-      }
-      // Removed C language and C++ language
-    ],
-    tools: [
-      // Development Tools and Utilities
-      {
-        skillName: "git",
-        svgIconPath: "https://img.icons8.com/color/96/000000/git.png"
-      },
-      {
-        skillName: "npm",
-        svgIconPath: "https://img.icons8.com/color/96/000000/npm.png"
-      },
-      {
-        skillName: "vscode",
-        svgIconPath:
-          "https://img.icons8.com/color/96/000000/visual-studio-code-2019.png"
-      },
-      {
-        skillName: "figma",
-        svgIconPath: "https://img.icons8.com/color/96/000000/figma.png"
-      },
-      {
-        skillName: "notion",
-        svgIconPath: "https://img.icons8.com/color/96/000000/notion.png"
-      }
-    ]
-  },
+  softwareSkills: [
+    // Front-end Technologies
+    {
+      skillName: "html-5",
+      svgIconPath: "https://img.icons8.com/color/96/000000/html-5.png"
+    },
+    {
+      skillName: "css3",
+      svgIconPath: "https://img.icons8.com/color/96/000000/css3.png"
+    },
+    {
+      skillName: "JavaScript",
+      svgIconPath: "https://img.icons8.com/color/96/000000/javascript.png"
+    },
+    {
+      skillName: "reactjs",
+      svgIconPath: "https://img.icons8.com/color/96/000000/react-native.png"
+    },
+    {
+      skillName: "nextjs",
+      svgIconPath: "https://img.icons8.com/color/96/000000/nextjs.png"
+    },
+    {
+      skillName: "tailwind",
+      svgIconPath: "https://img.icons8.com/color/96/000000/tailwindcss.png"
+    },
+    // Back-end / Server-side Technologies
+    {
+      skillName: "nodejs",
+      svgIconPath: "https://img.icons8.com/color/96/000000/nodejs.png"
+    },
+    {
+      skillName: "Express.js",
+      svgIconPath: "https://img.icons8.com/color/96/000000/express-js.png"
+    },
+    {
+      skillName: "sql-database",
+      svgIconPath: "https://img.icons8.com/color/96/000000/database.png"
+    },
+    {
+      skillName: "Mongo DB",
+      svgIconPath: "https://img.icons8.com/color/96/000000/mongodb.png"
+    },
+    // Programming Languages (only including Java now)
+    {
+      skillName: "Java",
+      svgIconPath:
+        "https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png"
+    },
+    // Development Tools and Utilities
+    {
+      skillName: "git",
+      svgIconPath: "https://img.icons8.com/color/96/000000/git.png"
+    },
+    {
+      skillName: "npm",
+      svgIconPath: "https://img.icons8.com/color/96/000000/npm.png"
+    },
+    {
+      skillName: "vscode",
+      svgIconPath:
+        "https://img.icons8.com/color/96/000000/visual-studio-code-2019.png"
+    },
+    {
+      skillName: "figma",
+      svgIconPath: "https://img.icons8.com/color/96/000000/figma.png"
+    },
+    {
+      skillName: "notion",
+      svgIconPath: "https://img.icons8.com/color/96/000000/notion.png"
+    }
+  ],
   display: true
+};
+
+// Education Section
+
+const educationInfo = {
+  schools: [
+    {
+      schoolName: "Aligarh College of Engineering and Technology (ACET)",
+      logo: require("./assets/images/ACETLOGO.png"),
+      subHeader: "Bachelor of Technology in Information Technology",
+      duration: "Nov 2020 - July 2024",
+      desc: "Graduated with a CGPA of 8.1. ACET is affiliated with Dr. A.P.J. Abdul Kalam Technical University (AKTU).",
+      descBullets: [
+        "Led the coding club, organizing technical workshops and hackathons.",
+        "Coordinated the university's annual tech fest, fostering innovation and collaboration."
+      ]
+    }
+  ],
+  display: true,
 };
 
 // Your top 3 proficient stacks/tech experience
@@ -169,29 +181,10 @@ const techStack = {
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
 
-// Education Section
-
-const educationInfo = {
-  schools: [
-    {
-      schoolName: "Aligarh College of Engineering and Technology (ACET)",
-      logo: require("./assets/images/ACETLOGO.jpg"),
-      subHeader: "Bachelor of Technology in Information Technology",
-      duration: "Nov 2020 - July 2024",
-      desc: "Graduated with a CGPA of 7.8. ACET is affiliated with Dr. A.P.J. Abdul Kalam Technical University (AKTU).",
-      descBullets: [
-        "Led the coding club, organizing technical workshops and hackathons.",
-        "Coordinated the university's annual tech fest, fostering innovation and collaboration."
-      ]
-    }
-  ],
-  display: true,
-};
-
 // Work experience section
 
 const workExperiences = {
-  display: true, //Set it to true to show workExperiences Section
+  display: false, //Set it to true to show workExperiences Section
   experience: [
     {
       role: "",
@@ -211,7 +204,7 @@ To know how to get github key look at readme.md */
 
 const openSource = {
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: false // Set false to hide this section, defaults to true
+  display: true // Set false to hide this section, defaults to true
 };
 
 // Some big projects you have worked on
@@ -221,12 +214,22 @@ const bigProjects = {
   subtitle: "A showcase of my personal and collaborative projects that blend creativity with technology.",
   projects: [
     {
+      image: require("./assets/images/RealTime Tracker.png"),
+      projectName: "Real‑Time Tracker",
+      projectDesc:
+        "A live‑location monitoring web app that lets users track moving assets on an interactive map in real time. Built with Node.js, Express and Socket.IO for bidirectional updates, and Mapbox GL JS for sleek, customizable map visualizations.",
+      footerLink: [
+        {
+          name: "View Project",
+          url: "https://github.com/prashsainidev/realtime-tracker"
+        }
+      ]
+    },
+    {
       image: require("./assets/images/Learniverse.png"),
       projectName: "Learniverse",
       projectDesc:
         "Learniverse is an evolving e-learning platform designed for students across different levels. Currently, it features a main page with Home, About, and Contact Us sections.",
-      subtitle:
-        "I'm actively developing Learniverse with plans to add many more features like courses, live classes, and interactive modules in the near future.",
       footerLink: [
         {
           name: "View Project",
@@ -254,12 +257,12 @@ const bigProjects = {
       footerLink: [
         {
           name: "View Project",
-          url: "https://github.com/prashantsaini1525/MyLibrary" // Replace with your actual project link
+          url: "https://github.com/prashsainidev/MyLibrary" // Replace with your actual project link
         }
       ]
     },
     {
-      image: require("./assets/images/ITech.jpg"),
+      image: require("./assets/images/ITech.png"),
       projectName: "I Tech World",
       projectDesc:
         "An ongoing e-learning platform designed for students from high school to engineering offering interactive courses and practical learning experiences.",
@@ -278,14 +281,13 @@ const bigProjects = {
       footerLink: [
         {
           name: "View Project",
-          url: "https://github.com/prashantsaini1525/Heart-Disease-Predicition" // Replace with your actual project link
+          url: "https://github.com/prashsainidev/Heart-Disease-Predicition" // Replace with your actual project link
         }
       ]
-    },
+    }
   ],
   display: true // Set false to hide this section, defaults to true
 };
-
 
 // Achievement Section
 // Include certificates, talks etc
@@ -296,6 +298,32 @@ const achievementSection = {
     "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
 
   achievementsCards: [
+    {
+      title: "Solutions Architecture Job Simulation",
+      subtitle:
+        "Developed a scalable and cost-effective hosting architecture solution, focusing on performance, reliability, and clear client communication to simplify complex technical ideas.",
+      image: require("./assets/images/aws.png"),
+      imageAlt: "Forage AWS Solutions Architecture Certificate",
+      footerLink: [
+        {
+          name: "View Certificate",
+          url: "https://drive.google.com/drive/folders/1Q1wjkqs-pw8Oxx9_ems64Mob4jToR96C?usp=sharing"
+        }
+      ]
+    },
+    {
+      title: "Software Engineering Job Simulation",
+      subtitle:
+        "Gained practical experience in software development by completing tasks in architecture, security, programming, testing, and agile methodologies, strengthening my problem-solving and collaborative skills.",
+      image: require("./assets/images/accenture.png"),
+      imageAlt: "Forage Accenture Software Engineering Certificate",
+      footerLink: [
+        {
+          name: "View Certificate",
+          url: "https://drive.google.com/drive/folders/1aXhh4VE2NB4UILqTtrvLpRZN9kkycXAz?usp=sharing"
+        }
+      ]
+    },
     {
       title: "Problem Solving Basic Certificate",
       subtitle:
@@ -331,7 +359,7 @@ const achievementSection = {
       footerLink: [
         {
           name: "View All Certificates",
-          url: "https://drive.google.com/drive/folders/1Yko2etEgpSiQnkOZBOaGYOBvCdJ1tIk0?usp=sharing" // Replace with your actual Google Drive link
+          url: "https://drive.google.com/drive/folders/1Yko2etEgpSiQnkOZBOaGYOBvCdJ1tIk0?usp=sharing"
         }
       ]
     },
@@ -364,7 +392,7 @@ const achievementSection = {
     {
       title: "Google Developer Badge",
       subtitle: "Awarded for showing solid skills with Google tools and an ongoing drive to learn and try new things.",
-      image: require("./assets/images/Google.png"), // Update with your badge image path
+      image: require("./assets/images/Google.png"),
       imageAlt: "Google Logo",
       footerLink: [
         {
@@ -376,24 +404,24 @@ const achievementSection = {
     {
       title: "Apna College Alpha Java & DSA Certificate",
       subtitle: "Completed an intensive 4.5-month course at Apna College where I mastered Java fundamentals, learned essential data structures and algorithms, and honed my problem-solving skills.",
-      image: require("./assets/images/APNA.png"), // Update the image path as needed
+      image: require("./assets/images/APNA.png"),
       imageAlt: "Apna College Logo",
       footerLink: [
         {
           name: "Certification",
-          url: "https://drive.google.com/drive/folders/1-nqGZBUB0Ulule3Q-tmJBZELo5iklmFz?usp=sharing" // Replace with your actual certificate URL if available
+          url: "https://drive.google.com/drive/folders/1-nqGZBUB0Ulule3Q-tmJBZELo5iklmFz?usp=sharing"
         }
       ]
     },
     {
       title: "TVS Credit E.P.I.C 5.0-IT Challenge Participation",
       subtitle: "Proudly represented ACET, Aligarh in the Round 1 Online Quiz of the TVS Credit E.P.I.C 5.0-IT Challenge, demonstrating quick thinking and technical insight.",
-      image: require("./assets/images/TVS.png"), // Update the image path as needed
+      image: require("./assets/images/TVS.png"),
       imageAlt: "TVS Logo",
       footerLink: [
         {
           name: "Certification",
-          url: "https://drive.google.com/drive/folders/1u5iCD8uuP4cWd4L-BtRtkSoaqa9N0jJE?usp=sharing" // Replace with your actual certificate URL
+          url: "https://drive.google.com/drive/folders/1u5iCD8uuP4cWd4L-BtRtkSoaqa9N0jJE?usp=sharing"
         }
       ]
     }
@@ -407,16 +435,16 @@ const blogSection = {
   title: "Blogs",
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
+  displayMediumBlogs: "false", // Set true to display fetched medium blogs instead of hardcoded ones
   blogs: [
     {
       url: "",
       title: "",
       description:
         ""
-    },
+    }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -437,7 +465,7 @@ const talkSection = {
         ""
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -464,8 +492,8 @@ const contactInfo = {
 // Twitter Section
 
 const twitterDetails = {
-  userName: "Prashan58889893", //Replace "twitter" with your twitter username without @
-  display: false // Set true to display this section, defaults to false
+  userName: "prashsainidev", //Replace "twitter" with your twitter username without @
+  display: true // Set true to display this section, defaults to false
 };
 
 const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
