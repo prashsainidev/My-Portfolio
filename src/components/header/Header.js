@@ -60,9 +60,10 @@ function Header() {
             <a href="#contact">Contact Me</a>
           </li>
           <li>
-            <button className="toggle-switch-btn">
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a>
               <ToggleSwitch />
-            </button>
+            </a>
           </li>
         </ul>
       </header>
