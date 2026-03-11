@@ -146,7 +146,7 @@ export default function socialMedia() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fa-brands fa-hashnode"></i>
+          <i className="fa-brands fa-hashnode"></i>
           <span></span>
         </a>
       ) : null}
