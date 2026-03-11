@@ -38,6 +38,14 @@ export default function Blogs() {
 
   const shouldUseFallbackBlogs =
     !blogSection.displayHashnodeBlogs || hasFetchError;
+  const fallbackBlogs = blogSection.blogs.filter(
+    blog => blog.url && (blog.title || blog.description)
+  );
+  const blogsToRender = shouldUseFallbackBlogs ? fallbackBlogs : hashnodeBlogs;
+
+  if (!blogsToRender.length) {
+    return null;
+  }
 
   return (
     <Fade bottom duration={1000} distance="20px">
@@ -54,34 +62,9 @@ export default function Blogs() {
         </div>
         <div className="blog-main-div">
           <div className="blog-text-div">
-            {shouldUseFallbackBlogs
-              ? blogSection.blogs.map((blog, i) => {
-                  return (
-                    <BlogCard
-                      key={i}
-                      isDark={isDark}
-                      blog={{
-                        url: blog.url,
-                        image: blog.image,
-                        title: blog.title,
-                        description: blog.description
-                      }}
-                    />
-                  );
-                })
-              : hashnodeBlogs.map((blog, i) => {
-                  return (
-                    <BlogCard
-                      key={i}
-                      isDark={isDark}
-                      blog={{
-                        url: blog.url,
-                        title: blog.title,
-                        description: blog.description
-                      }}
-                    />
-                  );
-                })}
+            {blogsToRender.map((blog, i) => {
+              return <BlogCard key={i} isDark={isDark} blog={blog} />;
+            })}
           </div>
         </div>
       </div>

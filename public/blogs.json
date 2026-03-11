@@ -1,0 +1,9 @@
+{
+  "items": [
+    {
+      "title": "Understanding JavaScript Promises — A Beginner's Real Experience",
+      "description": "Jab maine pehli baar yeh code dekha:\nconsole.log(\"Start\");\nsetTimeout(() => console.log(\"Async Task\"), 2000);\nconsole.log(\"End\");\n\nOutput:\nStart\nEnd\nAsync Task\n\nMera pehla reaction — \"Okay, 2000ms ka ",
+      "url": "https://prashsainidev.hashnode.dev/i-thought-0ms-delay-means-no-delay-i-was-completely-wrong"
+    }
+  ]
+}
