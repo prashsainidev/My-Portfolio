@@ -4,48 +4,41 @@ import BlogCard from "../../components/blogCard/BlogCard";
 import {blogSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+
 export default function Blogs() {
   const {isDark} = useContext(StyleContext);
-  const [mediumBlogs, setMediumBlogs] = useState([]);
-  function setMediumBlogsFunction(array) {
-    setMediumBlogs(array);
-  }
-  //Medium API returns blogs' content in HTML format. Below function extracts blogs' text content within paragraph tags
-  function extractTextContent(html) {
-    return typeof html === "string"
-      ? html
-          .split("p>")
-          .filter(el => !el.includes(">"))
-          .map(el => el.replace("</", ".").replace("<", ""))
-          .join(" ")
-      : NaN;
-  }
+  const [hashnodeBlogs, setHashnodeBlogs] = useState([]);
+  const [hasFetchError, setHasFetchError] = useState(false);
+
   useEffect(() => {
-    if (blogSection.displayMediumBlogs === "true") {
-      const getProfileData = () => {
-        fetch("/blogs.json")
-          .then(result => {
-            if (result.ok) {
-              return result.json();
-            }
-          })
-          .then(response => {
-            setMediumBlogsFunction(response.items);
-          })
-          .catch(function (error) {
-            console.error(
-              `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`
-            );
-            setMediumBlogsFunction("Error");
-            blogSection.displayMediumBlogs = "false";
-          });
-      };
-      getProfileData();
+    if (blogSection.displayHashnodeBlogs === "true") {
+      fetch("/blogs.json")
+        .then(result => {
+          if (!result.ok) {
+            throw new Error("Unable to load blogs.json");
+          }
+
+          return result.json();
+        })
+        .then(response => {
+          setHashnodeBlogs(Array.isArray(response.items) ? response.items : []);
+        })
+        .catch(error => {
+          console.error(
+            `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`
+          );
+          setHasFetchError(true);
+        });
     }
   }, []);
+
   if (!blogSection.display) {
     return null;
   }
+
+  const shouldUseFallbackBlogs =
+    blogSection.displayHashnodeBlogs !== "true" || hasFetchError;
+
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main" id="blogs">
@@ -61,8 +54,7 @@ export default function Blogs() {
         </div>
         <div className="blog-main-div">
           <div className="blog-text-div">
-            {blogSection.displayMediumBlogs !== "true" ||
-            mediumBlogs === "Error"
+            {shouldUseFallbackBlogs
               ? blogSection.blogs.map((blog, i) => {
                   return (
                     <BlogCard
@@ -77,15 +69,15 @@ export default function Blogs() {
                     />
                   );
                 })
-              : mediumBlogs.map((blog, i) => {
+              : hashnodeBlogs.map((blog, i) => {
                   return (
                     <BlogCard
                       key={i}
                       isDark={isDark}
                       blog={{
-                        url: blog.link,
+                        url: blog.url,
                         title: blog.title,
-                        description: extractTextContent(blog.content)
+                        description: blog.description
                       }}
                     />
                   );

@@ -6,16 +6,24 @@ require("dotenv").config();
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 const USE_GITHUB_DATA = process.env.USE_GITHUB_DATA;
-const MEDIUM_USERNAME = process.env.MEDIUM_USERNAME;
+const HASHNODE_BLOG_HOST = process.env.HASHNODE_BLOG_HOST;
 
 const ERR = {
   noUserName:
     "Github Username was found to be undefined. Please set all relevant environment variables.",
   requestFailed:
     "The request to GitHub didn't succeed. Check if GitHub token in your .env file is correct.",
-  requestFailedMedium:
-    "The request to Medium didn't succeed. Check if Medium username in your .env file is correct."
+  requestFailedHashnode:
+    "The request to Hashnode didn't succeed. Check if HASHNODE_BLOG_HOST in your .env file is correct."
 };
+
+function writeJsonFile(filePath, data) {
+  fs.writeFile(filePath, data, function (err) {
+    if (err) return console.log(err);
+    console.log(`saved file to ${filePath}`);
+  });
+}
+
 if (USE_GITHUB_DATA === "true") {
   if (GITHUB_USERNAME === undefined) {
     throw new Error(ERR.noUserName);
@@ -79,10 +87,7 @@ if (USE_GITHUB_DATA === "true") {
       data += d;
     });
     res.on("end", () => {
-      fs.writeFile("./public/profile.json", data, function (err) {
-        if (err) return console.log(err);
-        console.log("saved file to public/profile.json");
-      });
+      writeJsonFile("./public/profile.json", data);
     });
   });
 
@@ -94,31 +99,62 @@ if (USE_GITHUB_DATA === "true") {
   req.end();
 }
 
-if (MEDIUM_USERNAME !== undefined) {
-  console.log(`Fetching Medium blogs data for ${MEDIUM_USERNAME}`);
+if (HASHNODE_BLOG_HOST !== undefined) {
+  console.log(`Fetching Hashnode blogs data for ${HASHNODE_BLOG_HOST}`);
+
+  const data = JSON.stringify({
+    query: `
+      query PublicationPosts($host: String!) {
+        publication(host: $host) {
+          posts(first: 20) {
+            edges {
+              node {
+                title
+                brief
+                url
+              }
+            }
+          }
+        }
+      }
+    `,
+    variables: {
+      host: HASHNODE_BLOG_HOST
+    }
+  });
+
   const options = {
-    hostname: "api.rss2json.com",
-    path: `/v1/api.json?rss_url=https://medium.com/feed/@${MEDIUM_USERNAME}`,
+    hostname: "gql.hashnode.com",
+    path: "/",
     port: 443,
-    method: "GET"
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Content-Length": Buffer.byteLength(data)
+    }
   };
 
   const req = https.request(options, res => {
-    let mediumData = "";
+    let hashnodeData = "";
 
     console.log(`statusCode: ${res.statusCode}`);
     if (res.statusCode !== 200) {
-      throw new Error(ERR.requestMediumFailed);
+      throw new Error(ERR.requestFailedHashnode);
     }
 
     res.on("data", d => {
-      mediumData += d;
+      hashnodeData += d;
     });
     res.on("end", () => {
-      fs.writeFile("./public/blogs.json", mediumData, function (err) {
-        if (err) return console.log(err);
-        console.log("saved file to public/blogs.json");
-      });
+      const parsedData = JSON.parse(hashnodeData);
+      const edges = parsedData?.data?.publication?.posts?.edges || [];
+      const items = edges.map(({node}) => ({
+        title: node.title,
+        description: node.brief,
+        url: node.url
+      }));
+
+      writeJsonFile("./public/blogs.json", JSON.stringify({items}, null, 2));
     });
   });
 
@@ -126,5 +162,6 @@ if (MEDIUM_USERNAME !== undefined) {
     throw error;
   });
 
+  req.write(data);
   req.end();
 }
