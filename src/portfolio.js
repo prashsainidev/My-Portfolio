@@ -10,7 +10,8 @@ import {
   techStack,
   workExperiences
 } from "./config/careerSection";
-import { openSource } from "./config/githubSection";
+import { openSourceSection } from "./config/openSourceSection";
+import { githubProfileSection } from "./config/githubProfileSection";
 import {
   bigProjects
 } from "./config/projectSection";
@@ -30,7 +31,8 @@ export {
   educationInfo,
   techStack,
   workExperiences,
-  openSource,
+  openSourceSection,
+  githubProfileSection,
   bigProjects,
   achievementSection,
   blogSection,

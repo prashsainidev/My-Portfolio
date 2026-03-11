@@ -6,6 +6,7 @@ import StyleContext from "../../contexts/StyleContext";
 import {
   greeting,
   aboutSection,
+  openSourceSection,
   bigProjects,
   skillsSection,
   achievementSection,
@@ -19,6 +20,7 @@ function Header() {
   // Get the display flags for each section
   const viewAbout = aboutSection.display;
   const viewProjects = bigProjects.display;
+  const viewOpenSource = openSourceSection.display;
   const viewSkills = skillsSection.display;
   const viewWorkExperience = workExperiences.display;
   const viewAchievement = achievementSection.display;
@@ -61,6 +63,11 @@ function Header() {
           {viewProjects && (
             <li>
               <a href="#projects">Projects</a>
+            </li>
+          )}
+          {viewOpenSource && (
+            <li>
+              <a href="#opensource">Open Source</a>
             </li>
           )}
           {viewAchievement && (
