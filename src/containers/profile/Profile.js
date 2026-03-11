@@ -34,12 +34,7 @@ export default function Profile() {
     }
   }, []);
 
-  if (
-    openSource.display &&
-    openSource.showGithubProfile &&
-    !hasProfileError &&
-    profile
-  ) {
+  if (openSource.showGithubProfile && !hasProfileError && profile) {
     return (
       <Suspense fallback={renderLoader()}>
         <GithubProfileCard prof={profile} key={profile.id} />

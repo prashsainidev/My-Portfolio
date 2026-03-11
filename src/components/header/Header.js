@@ -9,7 +9,9 @@ import {
   bigProjects,
   skillsSection,
   achievementSection,
-  blogSection
+  blogSection,
+  workExperiences,
+  talkSection
 } from "../../portfolio";
 
 function Header() {
@@ -18,8 +20,11 @@ function Header() {
   const viewAbout = aboutSection.display;
   const viewProjects = bigProjects.display;
   const viewSkills = skillsSection.display;
+  const viewWorkExperience = workExperiences.display;
   const viewAchievement = achievementSection.display;
   const viewBlogs = blogSection.display;
+  const viewTalks = talkSection.display;
+  const viewResume = Boolean(greeting.resumeLink);
 
   return (
     <Headroom>
@@ -48,6 +53,11 @@ function Header() {
               <a href="#skills">Skills</a>
             </li>
           )}
+          {viewWorkExperience && (
+            <li>
+              <a href="#experience">Work Experience</a>
+            </li>
+          )}
           {viewProjects && (
             <li>
               <a href="#projects">Projects</a>
@@ -61,6 +71,18 @@ function Header() {
           {viewBlogs && (
             <li>
               <a href="#blogs">Blogs</a>
+            </li>
+          )}
+          {viewTalks && (
+            <li>
+              <a href="#talks">Talks</a>
+            </li>
+          )}
+          {viewResume && (
+            <li>
+              <a href={greeting.resumeLink} target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
             </li>
           )}
           <li>
