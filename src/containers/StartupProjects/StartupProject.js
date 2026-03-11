@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, {useState, useEffect, useContext} from "react";
 import "./StartupProjects.scss";
-import { bigProjects } from "../../portfolio";
-import { Fade } from "react-reveal";
+import {bigProjects} from "../../portfolio";
+import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function StartupProject() {
@@ -13,13 +13,12 @@ export default function StartupProject() {
     win.focus();
   }
 
-  const { isDark } = useContext(StyleContext);
+  const {isDark} = useContext(StyleContext);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Update isMobile based on the window width
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize(); // Set initial value
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -31,10 +30,16 @@ export default function StartupProject() {
   const content = (
     <div className="main" id="projects">
       <div>
-        <h1 className={isDark ? "project-heading project-heading-dark" : "project-heading"}>
+        <h1
+          className={isDark ? "project-heading project-heading-dark" : "project-heading"}
+        >
           {bigProjects.title}
         </h1>
-        <p className={isDark ? "dark-mode project-subtitle" : "subTitle project-subtitle"}>
+        <p
+          className={
+            isDark ? "project-subtitle project-subtitle-dark" : "subTitle project-subtitle"
+          }
+        >
           {bigProjects.subtitle}
         </p>
         <div className="projects-container">
@@ -42,9 +47,7 @@ export default function StartupProject() {
             <div
               key={i}
               className={
-                isDark
-                  ? "dark-mode project-card project-card-dark"
-                  : "project-card project-card-light"
+                isDark ? "project-card project-card-dark" : "project-card project-card-light"
               }
             >
               {project.image && (
@@ -57,10 +60,10 @@ export default function StartupProject() {
                 </div>
               )}
               <div className="project-detail">
-                <h5 className={isDark ? "dark-mode card-title" : "card-title"}>
+                <h5 className={isDark ? "card-title card-title-dark" : "card-title"}>
                   {project.projectName}
                 </h5>
-                <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
+                <p className={isDark ? "card-subtitle card-subtitle-dark" : "card-subtitle"}>
                   {project.projectDesc}
                 </p>
                 {project.footerLink && (
@@ -68,7 +71,7 @@ export default function StartupProject() {
                     {project.footerLink.map((link, i) => (
                       <span
                         key={i}
-                        className={isDark ? "dark-mode project-tag" : "project-tag"}
+                        className={isDark ? "project-tag project-tag-dark" : "project-tag"}
                         onClick={() => openUrlInNewTab(link.url)}
                       >
                         {link.name}
@@ -84,7 +87,6 @@ export default function StartupProject() {
     </div>
   );
 
-  // Render without Fade on mobile devices
   return isMobile ? content : (
     <Fade bottom duration={1000} distance="20px">
       {content}

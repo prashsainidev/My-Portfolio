@@ -13,10 +13,19 @@
   font-weight: 700;
   margin: 15px 0 0 0;
 }
+
+.card-title-dark {
+  color: $textColorDark;
+}
+
 .card-subtitle {
   color: $cardSubtitle;
   font-size: 1.063rem;
   line-height: 1.5rem;
+}
+
+.card-subtitle-dark {
+  color: rgba(255, 255, 255, 0.78);
 }
 .certificate-card {
   background-color: $lightBackground2;
@@ -28,6 +37,11 @@
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
+.certificate-card-dark {
+  background-color: $darkBackground;
+}
+
 .certificate-detail-div {
   text-align: center;
 }
@@ -36,7 +50,7 @@
   border-color: rgba(108, 99, 255, 0.28);
   background-color: #fbfaff;
 }
-.dark-mode.certificate-card:hover {
+.certificate-card-dark:hover {
   box-shadow: 0px 18px 32px -12px rgba(0, 0, 0, 0.45);
   border-color: rgba(169, 167, 249, 0.38);
   background-color: rgba(255, 255, 255, 0.02);
@@ -80,6 +94,10 @@
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease,
     box-shadow 0.2s ease;
+}
+
+.certificate-card-footer span.certificate-tag.certificate-tag-dark {
+  color: $lightBackground3;
 }
 span.certificate-tag:hover {
   background: $buttonHover;
