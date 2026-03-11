@@ -145,6 +145,7 @@ export default function socialMedia() {
           className="icon-button hashnode"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Hashnode blog"
         >
           <i className="fa-brands fa-hashnode"></i>
           <span></span>
