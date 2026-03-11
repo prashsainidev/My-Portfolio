@@ -24,13 +24,12 @@ const socialMediaLinks = {
 const aboutSection = {
   title: "About Me",
   subTitle:
-    "Hi, I'm Prashant Saini - a curious, driven full-stack developer from Aligarh, Uttar Pradesh.",
+    "I build practical web products with a frontend-first mindset and a strong focus on clarity, usability, and steady improvement.",
   aboutParagraphs: [
-    "I completed my B.Tech in Information Technology from Dr. A.P.J. Abdul Kalam Technical University in July 2024 with a CGPA of 8.1. Building my first web page was the moment I knew I wanted to create products for the web.",
-    "I work across both front-end and back-end development. I enjoy shaping user-friendly interfaces with JavaScript, HTML, and CSS, and building dependable back-end systems with Node.js and MongoDB.",
-    "My projects range from educational platforms and real-time tracking apps to a library management system and a machine-learning-based heart disease prediction project.",
-    "I care about clear code, thoughtful problem-solving, and steady improvement. I learn fast, enjoy collaboration, and like turning ideas into useful products.",
-    "I'm always open to learning, connecting, and working on projects that create real value."
+    "I'm Prashant Saini, a full-stack developer from Aligarh, Uttar Pradesh. I completed my B.Tech in Information Technology in 2024 with a CGPA of 8.1, and building my first web page was what drew me into development.",
+    "I enjoy working across both frontend and backend. I like building interfaces that feel simple and useful, and I also enjoy creating dependable backend systems with Node.js, Express, and MongoDB.",
+    "My projects include educational platforms, real-time tracking apps, CRUD-based systems, and a machine-learning-based heart disease prediction project. I like building things that solve practical problems and help me keep learning.",
+    "I care about clear code, thoughtful UI, and steady improvement. I learn fast, enjoy collaboration, and want to keep growing by building products that create real value."
   ],
   display: true
 };

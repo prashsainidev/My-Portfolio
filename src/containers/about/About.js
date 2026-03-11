@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 import "./About.scss";
 import { aboutSection, illustration } from "../../portfolio";
-import { Fade } from "react-reveal";
+import {Fade} from "react-reveal";
 import codingPerson from "../../assets/lottie/codingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function About() {
-  const { isDark } = useContext(StyleContext);
+  const {isDark} = useContext(StyleContext);
   if (!aboutSection.display) {
     return null;
   }
@@ -23,13 +23,11 @@ export default function About() {
         </Fade>
         <Fade right duration={1000}>
           <div className="about-text-div">
-            <h1 className={isDark ? "dark-mode about-heading" : "about-heading"}>
-              {aboutSection.title}
-            </h1>
+            <h1 className="about-heading">{aboutSection.title}</h1>
             <p
               className={
                 isDark
-                  ? "dark-mode subTitle about-text-subtitle"
+                  ? "subTitle about-text-subtitle about-text-subtitle-dark"
                   : "subTitle about-text-subtitle"
               }
             >
@@ -38,7 +36,7 @@ export default function About() {
             {aboutSection.aboutParagraphs.map((para, i) => (
               <p
                 key={i}
-                className={isDark ? "dark-mode about-text" : "about-text"}
+                className={isDark ? "about-text about-text-dark" : "about-text"}
               >
                 {para}
               </p>

@@ -1,7 +1,7 @@
 const skillsSection = {
-  title: "Tech Stack",
+  title: "What I Work With",
   subTitle:
-    "Full-Stack Developer Showcasing a Modern Tech Stack with Custom Icons & Innovative Solutions.",
+    "I work across the frontend and backend with tools I genuinely enjoy using to build clean, fast, and practical web products.",
   softwareSkills: [
     {
       skillName: "html-5",
@@ -74,12 +74,16 @@ const skillsSection = {
 };
 
 const educationInfo = {
+  title: "Education",
+  subtitle:
+    "The academic foundation that shaped how I learn, lead, and build as a developer.",
   schools: [
     {
       schoolName: "Aligarh College of Engineering and Technology (ACET)",
       logo: require("../assets/images/ACETLOGO.png"),
       subHeader: "Bachelor of Technology in Information Technology",
       duration: "Nov 2020 - July 2024",
+      grade: "CGPA 8.1",
       desc: "Graduated with a CGPA of 8.1. ACET is affiliated with Dr. A.P.J. Abdul Kalam Technical University (AKTU).",
       descBullets: [
         "Led the coding club, organizing technical workshops and hackathons.",
@@ -92,17 +96,20 @@ const educationInfo = {
 
 const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
+  title: "How I Approach Building",
+  subTitle:
+    "A quick snapshot of the areas I feel most confident in and where I naturally spend the most time while building products.",
   experience: [
     {
-      Stack: "Frontend/Design",
+      Stack: "Frontend and UI Thinking",
       progressPercentage: "55%"
     },
     {
-      Stack: "Programming",
+      Stack: "Problem Solving and Logic",
       progressPercentage: "40%"
     },
     {
-      Stack: "Version Control",
+      Stack: "Version Control and Workflow",
       progressPercentage: "60%"
     }
   ],

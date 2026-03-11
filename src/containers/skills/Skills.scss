@@ -1,6 +1,5 @@
 @import "../../_globalColor";
 
-/* Global box sizing and prevent horizontal overflow */
 .main {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -8,29 +7,61 @@
 
 .skills-main-div {
   width: 100%;
-  max-width: 1200px; // Constrain overall width
-  padding: 60px 20px;
+  max-width: 1200px;
+  padding: 56px 20px 24px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+.skills-shell {
+  width: 100%;
+  overflow: hidden;
 }
 
 .skills-text-div {
   width: 100%;
-  max-width: 800px; // Constrain text wrapper so it doesn't overflow
+  max-width: 920px;
   margin: 0 auto;
   text-align: center;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 20px 28px;
+  overflow: hidden;
+}
+
+.skills-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+  background: rgba(108, 99, 255, 0.12);
+  color: $buttonColor;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skills-eyebrow-dark {
+  background: rgba(170, 165, 255, 0.14);
+  color: #c9c5ff;
 }
 
 .skills-heading {
-  font-size: 48px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  line-height: 1.2;
+  font-size: 3.4rem;
+  font-weight: 700;
+  margin: 0 0 14px;
+  line-height: 1.08;
+  color: $textColor;
+}
+
+.skills-heading-dark {
+  color: $textColorDark;
 }
 
 .subTitle {
@@ -38,22 +69,34 @@
 }
 
 .skills-text-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  line-height: 1.6;
+  font-size: 1.08rem;
+  margin: 0;
+  line-height: 1.75;
 }
 
-/* Removed the Tech Stack section styles */
+.skills-text-subtitle-dark {
+  color: rgba(255, 255, 255, 0.76);
+}
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .skills-heading {
-    font-size: 36px;
+  .skills-main-div {
+    padding: 40px 16px 18px;
   }
-  .skills-text-subtitle {
-    font-size: 1.1rem;
-  }
+
   .skills-text-div {
-    padding: 0 10px;
+    padding: 0 0 22px;
+  }
+
+  .skills-eyebrow {
+    font-size: 0.74rem;
+    margin-bottom: 12px;
+  }
+
+  .skills-heading {
+    font-size: 2.35rem;
+  }
+
+  .skills-text-subtitle {
+    font-size: 0.98rem;
   }
 }

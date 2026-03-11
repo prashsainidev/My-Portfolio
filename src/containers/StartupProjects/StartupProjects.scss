@@ -1,5 +1,16 @@
 @import "../../_globalColor";
 
+.project-heading {
+  color: $textColor;
+  font-size: 56px;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+.project-heading-dark {
+  color: $textColorDark;
+}
+
 .card-image {
   max-width: 100%;
   height: auto;
@@ -83,8 +94,9 @@
 }
 
 @media (max-width: 768px) {
-  .skills-heading {
+  .project-heading {
     text-align: center;
+    font-size: 30px;
   }
   .project-subtitle {
     font-size: 16px;

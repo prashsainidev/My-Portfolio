@@ -31,7 +31,9 @@ export default function StartupProject() {
   const content = (
     <div className="main" id="projects">
       <div>
-        <h1 className="skills-heading">{bigProjects.title}</h1>
+        <h1 className={isDark ? "project-heading project-heading-dark" : "project-heading"}>
+          {bigProjects.title}
+        </h1>
         <p className={isDark ? "dark-mode project-subtitle" : "subTitle project-subtitle"}>
           {bigProjects.subtitle}
         </p>
