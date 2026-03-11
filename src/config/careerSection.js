@@ -1,0 +1,137 @@
+const skillsSection = {
+  title: "Tech Stack",
+  subTitle:
+    "Full-Stack Developer Showcasing a Modern Tech Stack with Custom Icons & Innovative Solutions.",
+  softwareSkills: [
+    {
+      skillName: "html-5",
+      svgIconPath: "https://img.icons8.com/color/96/000000/html-5.png"
+    },
+    {
+      skillName: "css3",
+      svgIconPath: "https://img.icons8.com/color/96/000000/css3.png"
+    },
+    {
+      skillName: "JavaScript",
+      svgIconPath: "https://img.icons8.com/color/96/000000/javascript.png"
+    },
+    {
+      skillName: "reactjs",
+      svgIconPath: "https://img.icons8.com/color/96/000000/react-native.png"
+    },
+    {
+      skillName: "nextjs",
+      svgIconPath: "https://img.icons8.com/color/96/000000/nextjs.png"
+    },
+    {
+      skillName: "tailwind",
+      svgIconPath: "https://img.icons8.com/color/96/000000/tailwindcss.png"
+    },
+    {
+      skillName: "nodejs",
+      svgIconPath: "https://img.icons8.com/color/96/000000/nodejs.png"
+    },
+    {
+      skillName: "Express.js",
+      svgIconPath: "https://img.icons8.com/color/96/000000/express-js.png"
+    },
+    {
+      skillName: "sql-database",
+      svgIconPath: "https://img.icons8.com/color/96/000000/database.png"
+    },
+    {
+      skillName: "Mongo DB",
+      svgIconPath: "https://img.icons8.com/color/96/000000/mongodb.png"
+    },
+    {
+      skillName: "Java",
+      svgIconPath:
+        "https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png"
+    },
+    {
+      skillName: "git",
+      svgIconPath: "https://img.icons8.com/color/96/000000/git.png"
+    },
+    {
+      skillName: "npm",
+      svgIconPath: "https://img.icons8.com/color/96/000000/npm.png"
+    },
+    {
+      skillName: "vscode",
+      svgIconPath:
+        "https://img.icons8.com/color/96/000000/visual-studio-code-2019.png"
+    },
+    {
+      skillName: "figma",
+      svgIconPath: "https://img.icons8.com/color/96/000000/figma.png"
+    },
+    {
+      skillName: "notion",
+      svgIconPath: "https://img.icons8.com/color/96/000000/notion.png"
+    }
+  ],
+  display: true
+};
+
+const educationInfo = {
+  schools: [
+    {
+      schoolName: "Aligarh College of Engineering and Technology (ACET)",
+      logo: require("../assets/images/ACETLOGO.png"),
+      subHeader: "Bachelor of Technology in Information Technology",
+      duration: "Nov 2020 - July 2024",
+      desc: "Graduated with a CGPA of 8.1. ACET is affiliated with Dr. A.P.J. Abdul Kalam Technical University (AKTU).",
+      descBullets: [
+        "Led the coding club, organizing technical workshops and hackathons.",
+        "Coordinated the university's annual tech fest, fostering innovation and collaboration."
+      ]
+    }
+  ],
+  display: true
+};
+
+const techStack = {
+  viewSkillBars: true, //Set it to true to show Proficiency Section
+  experience: [
+    {
+      Stack: "Frontend/Design",
+      progressPercentage: "55%"
+    },
+    {
+      Stack: "Programming",
+      progressPercentage: "40%"
+    },
+    {
+      Stack: "Version Control",
+      progressPercentage: "60%"
+    }
+  ],
+  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+};
+
+const workExperiences = {
+  display: false, //Set it to true to show workExperiences Section
+  experience: [
+    {
+      role: "",
+      company: "",
+      companylogo: require("../assets/images/Library.png"),
+      date: "Oct 2022 - Mar 2023",
+      desc: "",
+      descBullets: [""]
+    }
+  ]
+};
+
+const openSource = {
+  showGithubProfile: false, // Set true or false to show Contact profile using Github, defaults to true
+  display: false // Set false to hide this section, defaults to true
+};
+
+export {
+  skillsSection,
+  educationInfo,
+  techStack,
+  workExperiences,
+  openSource
+};

@@ -11,7 +11,7 @@ export default function Blogs() {
   const [hasFetchError, setHasFetchError] = useState(false);
 
   useEffect(() => {
-    if (blogSection.displayHashnodeBlogs === "true") {
+    if (blogSection.displayHashnodeBlogs) {
       fetch("/blogs.json")
         .then(result => {
           if (!result.ok) {
@@ -37,7 +37,7 @@ export default function Blogs() {
   }
 
   const shouldUseFallbackBlogs =
-    blogSection.displayHashnodeBlogs !== "true" || hasFetchError;
+    !blogSection.displayHashnodeBlogs || hasFetchError;
 
   return (
     <Fade bottom duration={1000} distance="20px">

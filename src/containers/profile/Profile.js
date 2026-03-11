@@ -7,43 +7,42 @@ const renderLoader = () => <Loading />;
 const GithubProfileCard = lazy(() =>
   import("../../components/githubProfileCard/GithubProfileCard")
 );
+
 export default function Profile() {
-  const [prof, setrepo] = useState([]);
-  function setProfileFunction(array) {
-    setrepo(array);
-  }
+  const [profile, setProfile] = useState(null);
+  const [hasProfileError, setHasProfileError] = useState(false);
 
   useEffect(() => {
-    if (openSource.showGithubProfile === "true") {
-      const getProfileData = () => {
-        fetch("/profile.json")
-          .then(result => {
-            if (result.ok) {
-              return result.json();
-            }
-          })
-          .then(response => {
-            setProfileFunction(response.data.user);
-          })
-          .catch(function (error) {
-            console.error(
-              `${error} (because of this error GitHub contact section could not be displayed. Contact section has reverted to default)`
-            );
-            setProfileFunction("Error");
-            openSource.showGithubProfile = "false";
-          });
-      };
-      getProfileData();
+    if (openSource.showGithubProfile) {
+      fetch("/profile.json")
+        .then(result => {
+          if (!result.ok) {
+            throw new Error("Unable to load profile.json");
+          }
+
+          return result.json();
+        })
+        .then(response => {
+          setProfile(response?.data?.user || null);
+        })
+        .catch(error => {
+          console.error(
+            `${error} (because of this error GitHub contact section could not be displayed. Contact section has reverted to default)`
+          );
+          setHasProfileError(true);
+        });
     }
   }, []);
+
   if (
     openSource.display &&
-    openSource.showGithubProfile === "true" &&
-    !(typeof prof === "string" || prof instanceof String)
+    openSource.showGithubProfile &&
+    !hasProfileError &&
+    profile
   ) {
     return (
       <Suspense fallback={renderLoader()}>
-        <GithubProfileCard prof={prof} key={prof.id} />
+        <GithubProfileCard prof={profile} key={profile.id} />
       </Suspense>
     );
   } else {
