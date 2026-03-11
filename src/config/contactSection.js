@@ -6,9 +6,4 @@ const contactInfo = {
   email_address: "Prashant.saini.3150@gmail.com"
 };
 
-const twitterDetails = {
-  userName: "prashsainidev", //Replace "twitter" with your twitter username without @
-  display: false // Set true to display this section, defaults to false
-};
-
-export {contactInfo, twitterDetails};
+export {contactInfo};

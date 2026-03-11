@@ -6,11 +6,8 @@ import emoji from "react-easy-emoji";
 import {Fade} from "react-reveal";
 
 export default function GithubProfileCard({prof}) {
-  if (isHireable) {
-    prof.hireable = "Yes";
-  } else {
-    prof.hireable = "No";
-  }
+  const hireableStatus = isHireable ? "Yes" : "No";
+
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main" id="contact">
@@ -43,7 +40,7 @@ export default function GithubProfileCard({prof}) {
             )}
             <div className="opp-div">
               <span className="desc-prof">
-                Open for opportunities: {prof.hireable}
+                Open for opportunities: {hireableStatus}
               </span>
             </div>
             <SocialMedia />

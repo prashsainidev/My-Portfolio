@@ -2,23 +2,23 @@
 
 // To change portfolio colors globally go to the _globalColor.scss file
 
-import {splashScreen, illustration, isHireable} from "./config/siteConfig";
-import {greeting, socialMediaLinks, aboutSection} from "./config/homeSection";
+import { splashScreen, illustration, isHireable } from "./config/siteConfig";
+import { greeting, socialMediaLinks, aboutSection } from "./config/homeSection";
 import {
   skillsSection,
   educationInfo,
   techStack,
-  workExperiences,
-  openSource
+  workExperiences
 } from "./config/careerSection";
+import { openSource } from "./config/githubSection";
 import {
-  bigProjects,
-  achievementSection,
-  talkSection,
-  podcastSection
+  bigProjects
 } from "./config/projectSection";
+import { achievementSection } from "./config/certificationSection";
+import { talkSection, podcastSection } from "./config/mediaSection";
 import blogSection from "./config/blogSection";
-import {contactInfo, twitterDetails} from "./config/contactSection";
+import { contactInfo } from "./config/contactSection";
+import { twitterDetails } from "./config/twitterSection";
 
 export {
   illustration,

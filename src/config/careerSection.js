@@ -123,15 +123,9 @@ const workExperiences = {
   ]
 };
 
-const openSource = {
-  showGithubProfile: false, // Set true or false to show Contact profile using Github, defaults to true
-  display: false // Set false to hide this section, defaults to true
-};
-
 export {
   skillsSection,
   educationInfo,
   techStack,
-  workExperiences,
-  openSource
+  workExperiences
 };

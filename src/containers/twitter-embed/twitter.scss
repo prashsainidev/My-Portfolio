@@ -15,9 +15,29 @@
 .twitter-component {
   width: auto;
   padding: 1.5rem;
+  max-width: 700px;
 }
 
 .timeline-Header-title {
   font-size: 56px;
   font-weight: 100 !important;
+}
+
+.twitter-fallback-card {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.twitter-fallback-title {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.twitter-fallback-text {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }

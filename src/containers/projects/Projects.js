@@ -11,6 +11,7 @@ export default function Projects() {
   const FailedLoading = () => null;
   const renderLoader = () => <Loading />;
   const [repo, setrepo] = useState([]);
+  const [hasRepoError, setHasRepoError] = useState(false);
   // todo: remove useContex because is not supported
   const {isDark} = useContext(StyleContext);
 
@@ -18,19 +19,20 @@ export default function Projects() {
     const getRepoData = () => {
       fetch("/profile.json")
         .then(result => {
-          if (result.ok) {
-            return result.json();
+          if (!result.ok) {
+            throw new Error("Unable to load profile.json");
           }
-          throw result;
+
+          return result.json();
         })
         .then(response => {
-          setrepoFunction(response.data.user.pinnedItems.edges);
+          setrepoFunction(response?.data?.user?.pinnedItems?.edges || []);
         })
         .catch(function (error) {
           console.error(
             `${error} (because of this error, nothing is shown in place of Projects section. Also check if Projects section has been configured)`
           );
-          setrepoFunction("Error");
+          setHasRepoError(true);
         });
     };
     getRepoData();
@@ -39,10 +41,7 @@ export default function Projects() {
   function setrepoFunction(array) {
     setrepo(array);
   }
-  if (
-    !(typeof repo === "string" || repo instanceof String) &&
-    openSource.display
-  ) {
+  if (openSource.display && !hasRepoError && repo.length) {
     return (
       <Suspense fallback={renderLoader()}>
         <div className="main" id="opensource">
@@ -68,7 +67,7 @@ export default function Projects() {
         </div>
       </Suspense>
     );
-  } else {
-    return <FailedLoading />;
   }
+
+  return <FailedLoading />;
 }
