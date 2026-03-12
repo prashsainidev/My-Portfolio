@@ -80,7 +80,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Aligarh College of Engineering and Technology (ACET)",
-      logo: require("../assets/images/ACETLOGO.png"),
+      logo: require("../assets/images/education/ACETLOGO.png"),
       subHeader: "Bachelor of Technology in Information Technology",
       duration: "Nov 2020 - July 2024",
       grade: "CGPA 8.1",
@@ -122,7 +122,7 @@ const workExperiences = {
     {
       role: "",
       company: "",
-      companylogo: require("../assets/images/Library.png"),
+      companylogo: require("../assets/images/shared/Library.png"),
       date: "Oct 2022 - Mar 2023",
       desc: "",
       descBullets: [""]

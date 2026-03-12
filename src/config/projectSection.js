@@ -4,7 +4,7 @@ const bigProjects = {
     "A selection of projects that reflect my interest in real-world products, clean interfaces, and practical problem-solving.",
   projects: [
     {
-      image: require("../assets/images/RealTime Tracker.png"),
+      image: require("../assets/images/projects/RealTime Tracker.png"),
       projectName: "Real-Time Tracker",
       projectDesc:
         "A real-time location tracking app built with Node.js, Express, Socket.IO, and Mapbox GL JS. It shows moving assets live on an interactive map with smooth updates and a clean monitoring experience.",
@@ -16,7 +16,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("../assets/images/Learniverse.png"),
+      image: require("../assets/images/projects/Learniverse.png"),
       projectName: "Learniverse",
       projectDesc:
         "An evolving e-learning platform designed for students across different levels, with a focus on simple navigation, approachable design, and a clear learning journey.",
@@ -28,7 +28,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("../assets/images/weather.png"),
+      image: require("../assets/images/projects/weather.png"),
       projectName: "Weatherwise",
       projectDesc:
         "A weather forecasting app that delivers real-time conditions and useful predictions in a simple, easy-to-read interface.",
@@ -40,7 +40,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("../assets/images/Library.png"),
+      image: require("../assets/images/shared/Library.png"),
       projectName: "MyLibrary",
       projectDesc:
         "A library management system built with Node.js, Express, EJS, and MongoDB that makes it easy to manage books and authors through a clear CRUD workflow.",
@@ -52,7 +52,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("../assets/images/ITech.png"),
+      image: require("../assets/images/projects/ITech.png"),
       projectName: "I Tech World",
       projectDesc:
         "An ongoing e-learning platform for students from high school to engineering, designed to make technical learning more interactive and accessible.",
@@ -64,7 +64,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("../assets/images/Heart.png"),
+      image: require("../assets/images/projects/Heart.png"),
       projectName: "Heart Disease Prediction",
       projectDesc:
         "A machine learning project that predicts heart disease risk using real-world data and presents the results in a more understandable, actionable way.",

@@ -3,7 +3,7 @@ import "./Contact.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {illustration, contactInfo} from "../../portfolio";
 import {Fade} from "react-reveal";
-import email from "../../assets/lottie/email";
+import email from "../../assets/lottie/contact/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -58,7 +58,7 @@ export default function Contact() {
             ) : (
               <img
                 alt="Man working"
-                src={require("../../assets/images/contactMailDark.svg")}
+                src={require("../../assets/images/contact/contactMailDark.svg")}
               ></img>
             )}
           </div>

@@ -19,10 +19,10 @@ export default function Projects() {
       return;
     }
 
-    fetch("/profile.json")
+    fetch("/data/profile.json")
       .then(result => {
         if (!result.ok) {
-          throw new Error("Unable to load profile.json");
+          throw new Error("Unable to load data/profile.json");
         }
 
         return result.json();

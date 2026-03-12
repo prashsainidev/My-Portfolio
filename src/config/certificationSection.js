@@ -7,7 +7,7 @@ const achievementSection = {
       title: "Solutions Architecture Job Simulation",
       subtitle:
         "Developed a scalable and cost-effective hosting architecture solution, focusing on performance, reliability, and clear client communication to simplify complex technical ideas.",
-      image: require("../assets/images/aws.png"),
+      image: require("../assets/images/certifications/aws.png"),
       imageAlt: "Forage AWS Solutions Architecture Certificate",
       footerLink: [
         {
@@ -20,7 +20,7 @@ const achievementSection = {
       title: "Software Engineering Job Simulation",
       subtitle:
         "Gained practical experience in software development by completing tasks in architecture, security, programming, testing, and agile methodologies, strengthening my problem-solving and collaborative skills.",
-      image: require("../assets/images/accenture.png"),
+      image: require("../assets/images/certifications/accenture.png"),
       imageAlt: "Forage Accenture Software Engineering Certificate",
       footerLink: [
         {
@@ -33,7 +33,7 @@ const achievementSection = {
       title: "Problem Solving Basic Certificate",
       subtitle:
         "Through HackerRank's engaging challenges, I refined my problem-solving skills and built a strong coding foundation, boosting my logical thinking and passion for coding.",
-      image: require("../assets/images/HackerRank.png"),
+      image: require("../assets/images/certifications/HackerRank.png"),
       imageAlt: "HackerRank Logo",
       footerLink: [
         {
@@ -46,7 +46,7 @@ const achievementSection = {
       title: "CSS Basic Certificate",
       subtitle:
         "I completed the CSS Basics course to enhance my design skills and create visually appealing web interfaces, mastering the art of clean and creative web styling.",
-      image: require("../assets/images/HackerRank.png"),
+      image: require("../assets/images/certifications/HackerRank.png"),
       imageAlt: "HackerRank Logo",
       footerLink: [
         {
@@ -59,7 +59,7 @@ const achievementSection = {
       title: "AWS Skill Builder Badge",
       subtitle:
         "Completed Generative AI courses: 'Introduction to Generative AI - Art of Possible', 'Planning a Generative AI Certificate', and 'Building a Generative AI-Ready Organization'.",
-      image: require("../assets/images/amazon.png"),
+      image: require("../assets/images/certifications/amazon.png"),
       imageAlt: "Amazon AWS Skill Builder",
       footerLink: [
         {
@@ -72,7 +72,7 @@ const achievementSection = {
       title: "Data Analytics Consulting Virtual Internship",
       subtitle:
         "Completed on November 4th, 2023, this internship sharpened my skills in data quality assessment, insights, and presentation under expert mentorship.",
-      image: require("../assets/images/KPMG.png"),
+      image: require("../assets/images/certifications/KPMG.png"),
       imageAlt: "KPMG Logo",
       footerLink: [
         {
@@ -85,7 +85,7 @@ const achievementSection = {
       title: "Data Analytics and Visualization Job Simulation",
       subtitle:
         "A transformative job simulation completed in October 2023, where I immersed myself in real-world projects, mastered data cleaning and modeling, created captivating visual stories, and presented clear, impactful insights.",
-      image: require("../assets/images/accenture.png"),
+      image: require("../assets/images/certifications/accenture.png"),
       imageAlt: "ACCENTURE LOGO",
       footerLink: [
         {
@@ -98,7 +98,7 @@ const achievementSection = {
       title: "Google Developer Badge",
       subtitle:
         "Awarded for showing solid skills with Google tools and an ongoing drive to learn and try new things.",
-      image: require("../assets/images/Google.png"),
+      image: require("../assets/images/certifications/Google.png"),
       imageAlt: "Google Logo",
       footerLink: [
         {
@@ -111,7 +111,7 @@ const achievementSection = {
       title: "Apna College Alpha Java & DSA Certificate",
       subtitle:
         "Completed an intensive 4.5-month course at Apna College where I mastered Java fundamentals, learned essential data structures and algorithms, and honed my problem-solving skills.",
-      image: require("../assets/images/APNA.png"),
+      image: require("../assets/images/certifications/APNA.png"),
       imageAlt: "Apna College Logo",
       footerLink: [
         {
@@ -124,7 +124,7 @@ const achievementSection = {
       title: "TVS Credit E.P.I.C 5.0-IT Challenge Participation",
       subtitle:
         "Proudly represented ACET, Aligarh in the Round 1 Online Quiz of the TVS Credit E.P.I.C 5.0-IT Challenge, demonstrating quick thinking and technical insight.",
-      image: require("../assets/images/TVS.png"),
+      image: require("../assets/images/certifications/TVS.png"),
       imageAlt: "TVS Logo",
       footerLink: [
         {

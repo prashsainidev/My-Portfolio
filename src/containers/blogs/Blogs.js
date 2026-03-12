@@ -12,10 +12,10 @@ export default function Blogs() {
 
   useEffect(() => {
     if (blogSection.displayHashnodeBlogs) {
-      fetch("/blogs.json")
+      fetch("/data/blogs.json")
         .then(result => {
           if (!result.ok) {
-            throw new Error("Unable to load blogs.json");
+            throw new Error("Unable to load data/blogs.json");
           }
 
           return result.json();

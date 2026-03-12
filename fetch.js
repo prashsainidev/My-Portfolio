@@ -87,7 +87,7 @@ if (USE_GITHUB_DATA === "true") {
       data += d;
     });
     res.on("end", () => {
-      writeJsonFile("./public/profile.json", data);
+      writeJsonFile("./public/data/profile.json", data);
     });
   });
 
@@ -154,7 +154,7 @@ if (HASHNODE_BLOG_HOST !== undefined) {
         url: node.url
       }));
 
-      writeJsonFile("./public/blogs.json", JSON.stringify({items}, null, 2));
+      writeJsonFile("./public/data/blogs.json", JSON.stringify({items}, null, 2));
     });
   });
 
