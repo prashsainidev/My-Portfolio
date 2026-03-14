@@ -40,14 +40,14 @@ const bigProjects = {
       ]
     },
     {
-      image: require("../assets/images/shared/Library.png"),
+      image: require("../assets/images/projects/Library.png"),
       projectName: "MyLibrary",
       projectDesc:
         "A library management system built with Node.js, Express, EJS, and MongoDB that makes it easy to manage books and authors through a clear CRUD workflow.",
       footerLink: [
         {
           name: "View Project",
-          url: "https://github.com/prashsainidev/MyLibrary"
+          url: "https://mylibrary-kappa.vercel.app/"
         }
       ]
     },

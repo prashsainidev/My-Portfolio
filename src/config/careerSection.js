@@ -122,7 +122,7 @@ const workExperiences = {
     {
       role: "",
       company: "",
-      companylogo: require("../assets/images/shared/Library.png"),
+      companylogo: require("../assets/images/projects/Library.png"),
       date: "Oct 2022 - Mar 2023",
       desc: "",
       descBullets: [""]
