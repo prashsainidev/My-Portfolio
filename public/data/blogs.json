@@ -1,6 +1,21 @@
 {
   "items": [
     {
+      "title": "DNS Record Types Explained",
+      "description": "Introduction\nHow does a browser know where a website lives?\nJab tum google.com ya example.com type karte ho, browser ko kisi na kisi tarah us website ka actual location chahiye hota hai.\nBrowser domai",
+      "url": "https://prashsainidev.hashnode.dev/dns-record-types-explained"
+    },
+    {
+      "title": "How DNS Resolution Works",
+      "description": "Introduction\nWhen you type google.com in your browser, the website opens almost instantly.\nIt feels simple from the outside, but behind the scenes a structured system works to convert that domain name",
+      "url": "https://prashsainidev.hashnode.dev/how-dns-resolution-works"
+    },
+    {
+      "title": "What Really Happens When You Open a Website?",
+      "description": "Introduction\nWhen you open a website in the browser, it feels instant.\nYou type a URL, press enter, and the page appears.\nBut in reality, a full chain of systems and network devices works in the backg",
+      "url": "https://prashsainidev.hashnode.dev/what-really-happens-when-you-open-a-website"
+    },
+    {
       "title": "Understanding JavaScript Promises — A Beginner's Real Experience",
       "description": "Jab maine pehli baar yeh code dekha:\nconsole.log(\"Start\");\nsetTimeout(() => console.log(\"Async Task\"), 2000);\nconsole.log(\"End\");\n\nOutput:\nStart\nEnd\nAsync Task\n\nMera pehla reaction — \"Okay, 2000ms ka ",
       "url": "https://prashsainidev.hashnode.dev/i-thought-0ms-delay-means-no-delay-i-was-completely-wrong"
