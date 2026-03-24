@@ -1,6 +1,26 @@
 {
   "items": [
     {
+      "title": "How a Browser Works: A Beginner-Friendly Guide to Browser Internals",
+      "description": "Introduction\nWhat happens after I type a URL and press Enter?\nYe question simple lagta hai, but iske peeche browser ka kaafi interesting internal flow chhupa hota hai.\nHum usually bas itna dekhte hain",
+      "url": "https://prashsainidev.hashnode.dev/how-a-browser-works"
+    },
+    {
+      "title": "Getting Started with cURL",
+      "description": "Introduction\nWeb development mein ek point ke baad sirf browser enough nahi lagta.\nTumhe directly server se baat karni hoti hai.\nPehle ye samajhte hain ki server hota kya hai.\nSimple words mein:\nserve",
+      "url": "https://prashsainidev.hashnode.dev/getting-started-with-curl"
+    },
+    {
+      "title": "TCP vs UDP: When to Use What, and How TCP Relates to HTTP",
+      "description": "Introduction\nInternet par data bhejne ke liye rules chahiye hote hain.\nAgar rules na hon, toh messages kabhi galat order mein pahunch sakte hain, kabhi miss ho sakte hain, aur kabhi itni delay ho sakt",
+      "url": "https://prashsainidev.hashnode.dev/tcp-vs-udp"
+    },
+    {
+      "title": "TCP Working: 3-Way Handshake & Reliable Communication",
+      "description": "Introduction\nSocho agar internet par data bina kisi proper rule ke bheja jaata.\nKoi packet pehle pahunchta. Koi baad mein. Koi beech mein kho jaata. Koi duplicate aa jaata.\nAise system mein login, pay",
+      "url": "https://prashsainidev.hashnode.dev/tcp-working-3-way-handshake"
+    },
+    {
       "title": "DNS Record Types Explained",
       "description": "Introduction\nHow does a browser know where a website lives?\nJab tum google.com ya example.com type karte ho, browser ko kisi na kisi tarah us website ka actual location chahiye hota hai.\nBrowser domai",
       "url": "https://prashsainidev.hashnode.dev/dns-record-types-explained"
@@ -11,9 +31,9 @@
       "url": "https://prashsainidev.hashnode.dev/how-dns-resolution-works"
     },
     {
-      "title": "What Really Happens When You Open a Website?",
+      "title": "Understanding Network Devices",
       "description": "Introduction\nWhen you open a website in the browser, it feels instant.\nYou type a URL, press enter, and the page appears.\nBut in reality, a full chain of systems and network devices works in the backg",
-      "url": "https://prashsainidev.hashnode.dev/what-really-happens-when-you-open-a-website"
+      "url": "https://prashsainidev.hashnode.dev/understanding-network-devices"
     },
     {
       "title": "Understanding JavaScript Promises — A Beginner's Real Experience",
