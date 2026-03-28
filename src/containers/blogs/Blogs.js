@@ -1,9 +1,12 @@
 import React, {useState, useEffect, useContext} from "react";
 import "./Blog.scss";
 import BlogCard from "../../components/blogCard/BlogCard";
-import {blogSection} from "../../portfolio";
+import Button from "../../components/button/Button";
+import {blogSection, socialMediaLinks} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+
+const BLOGS_TO_SHOW = 6;
 
 export default function Blogs() {
   const {isDark} = useContext(StyleContext);
@@ -42,8 +45,10 @@ export default function Blogs() {
     blog => blog.url && (blog.title || blog.description)
   );
   const blogsToRender = shouldUseFallbackBlogs ? fallbackBlogs : hashnodeBlogs;
+  const visibleBlogs = blogsToRender.slice(0, BLOGS_TO_SHOW);
+  const blogArchiveUrl = socialMediaLinks.hashnode;
 
-  if (!blogsToRender.length) {
+  if (!visibleBlogs.length) {
     return null;
   }
 
@@ -62,11 +67,19 @@ export default function Blogs() {
         </div>
         <div className="blog-main-div">
           <div className="blog-text-div">
-            {blogsToRender.map((blog, i) => {
+            {visibleBlogs.map((blog, i) => {
               return <BlogCard key={i} isDark={isDark} blog={blog} />;
             })}
           </div>
         </div>
+        {blogArchiveUrl ? (
+          <Button
+            text={"Show More"}
+            className="blog-button"
+            href={blogArchiveUrl}
+            newTab={true}
+          />
+        ) : null}
       </div>
     </Fade>
   );
