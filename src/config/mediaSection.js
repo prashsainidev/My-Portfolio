@@ -1,6 +1,6 @@
 const talkSection = {
   title: "TALKS",
-  subtitle: "I love to share my limited knowledge and earn a speaker badge.",
+  subtitle: "I enjoy sharing what I learn through practical sessions, workshops, and developer conversations.",
   talks: [
     {
       title: "Git and GitHub Workshop",
@@ -14,7 +14,7 @@ const talkSection = {
 
 const podcastSection = {
   title: "Podcast",
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
+  subtitle: "Conversations about building, learning, and technology.",
   podcast: [""],
   display: false // Set false to hide this section, defaults to true
 };

@@ -1,7 +1,8 @@
 {
   "homepage": "",
-  "name": "developerfolio",
+  "name": "prashant-portfolio",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "colorthief": "^2.3.0",

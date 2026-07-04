@@ -4,7 +4,7 @@ const greeting = {
   subTitle:
     "I'm a full-stack developer who enjoys building clean, practical web experiences with JavaScript, React.js, Node.js, and modern web tools.",
   resumeLink:
-    "https://drive.google.com/drive/folders/1pNEG5U8ipkXiXczyFJw1nK-1H0mC90fo?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/13evi9mKUFX-Kew73ahhSEHth_jGa1uO_/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 

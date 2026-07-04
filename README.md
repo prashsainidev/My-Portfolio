@@ -5,7 +5,7 @@
 ### Full-Stack Developer focused on practical products, clean UI, and steady growth
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-prashant--pi.vercel.app-55198b?style=for-the-badge&logo=vercel&logoColor=white)](https://prashant-pi.vercel.app/)
-[![Resume](https://img.shields.io/badge/Resume-Google%20Drive-0F172A?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1pNEG5U8ipkXiXczyFJw1nK-1H0mC90fo?usp=sharing)
+[![Resume](https://img.shields.io/badge/Resume-Google%20Drive-0F172A?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/13evi9mKUFX-Kew73ahhSEHth_jGa1uO_/view?usp=sharing)
 [![Hashnode](https://img.shields.io/badge/Hashnode-prashsainidev-2962FF?style=for-the-badge&logo=hashnode&logoColor=white)](https://prashsainidev.hashnode.dev/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-prashsainidev-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/prashsainidev/)
 

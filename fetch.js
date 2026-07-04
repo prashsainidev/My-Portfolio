@@ -139,7 +139,9 @@ if (HASHNODE_BLOG_HOST !== undefined) {
 
     console.log(`statusCode: ${res.statusCode}`);
     if (res.statusCode !== 200) {
-      throw new Error(ERR.requestFailedHashnode);
+      console.warn(`${ERR.requestFailedHashnode} Status: ${res.statusCode}. Keeping existing blog data.`);
+      res.resume();
+      return;
     }
 
     res.on("data", d => {
@@ -159,7 +161,7 @@ if (HASHNODE_BLOG_HOST !== undefined) {
   });
 
   req.on("error", error => {
-    throw error;
+    console.warn(`${ERR.requestFailedHashnode} ${error.message}. Keeping existing blog data.`);
   });
 
   req.write(data);
